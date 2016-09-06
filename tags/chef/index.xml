@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chef on mattstratton.io</title>
+    <link>https://www.mattstratton.io/tags/chef/</link>
+    <description>Recent content in Chef on mattstratton.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2015 Matt Stratton</copyright>
+    <lastBuildDate>Wed, 09 Sep 2015 09:54:20 -0500</lastBuildDate>
+    <atom:link href="https://www.mattstratton.io/tags/chef/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Creating multiple validator keys in Chef</title>
+      <link>https://www.mattstratton.io/creating-multiple-validator-keys-in-chef/</link>
+      <pubDate>Wed, 09 Sep 2015 09:54:20 -0500</pubDate>
+      
+      <guid>https://www.mattstratton.io/creating-multiple-validator-keys-in-chef/</guid>
+      <description>
+
+&lt;p&gt;By default, many folks think that there is one (and only one) validator key for a Chef organization. Which brings up a few issues:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If the validator key ever needs to be reset, then everyone who was using that key is screwed.&lt;/li&gt;
+&lt;li&gt;If the validator key is compromised, then it must be reset for everyone.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The good news is that you can have as many validator keys as you want. For example, every user who has the capability of performing &lt;code&gt;knife bootstrap&lt;/code&gt; might have their own. Or you might use a different key for your Azure provisioning than for your VMware provisioining, etc. This is a really easy thing to do.&lt;/p&gt;
+
+&lt;h2 id=&#34;adding-a-validator-client-via-knife:34526d18ffb1d4e9e664c0aa33873b42&#34;&gt;Adding a validator client via knife&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;knife client create mstratton_validator_test --file mstratton_validator_test.pem --validator&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After you do this, your editor will pop open which lets you make changes to the client configuration if you would like. You can use the &lt;code&gt;--disable-editing&lt;/code&gt; flag to remove this capability. The &lt;code&gt;--file&lt;/code&gt; flag will specify where you would like the private key to be written to.&lt;/p&gt;
+
+&lt;h2 id=&#34;adding-a-validator-client-via-chef-manage-https-docs-chef-io-manage-html:34526d18ffb1d4e9e664c0aa33873b42&#34;&gt;Adding a validator client via &lt;a href=&#34;https://docs.chef.io/manage.html&#34;&gt;Chef Manage&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Log onto your Chef Manage UI. If you use Hosted Chef, the url is &lt;a href=&#34;http://manage.chef.io&#34;&gt;http://manage.chef.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.mattstratton.io/img/validator/Chef_Manage1.png&#34; alt=&#34;Example image&#34; /&gt;
+
+&lt;img src=&#34;https://www.mattstratton.io/img/validator/Chef_Manage2.png&#34; alt=&#34;Example image&#34; /&gt;
+
+&lt;img src=&#34;https://www.mattstratton.io/img/validator/Chef_Manage3.png&#34; alt=&#34;Example image&#34; /&gt;
+
+&lt;img src=&#34;https://www.mattstratton.io/img/validator/Chef_Manage4.png&#34; alt=&#34;Example image&#34; /&gt;
+
+&lt;img src=&#34;https://www.mattstratton.io/img/validator/Chef_Manage5.png&#34; alt=&#34;Example image&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note - I have deleted this validator client, so don&amp;rsquo;t think you&amp;rsquo;re gonna be slick and hack the private key&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s that simple! You now have another validation client for your use.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iterating through word arrays is your friend in chef</title>
+      <link>https://www.mattstratton.io/iterating-through-word-arrays-is-your-friend-in-chef/</link>
+      <pubDate>Fri, 28 Aug 2015 02:20:39 -0500</pubDate>
+      
+      <guid>https://www.mattstratton.io/iterating-through-word-arrays-is-your-friend-in-chef/</guid>
+      <description>&lt;p&gt;Often times, when you&amp;rsquo;re installing a set of packages or Windows Features, for example, in Chef, you have a long list of items you want to install. Here&amp;rsquo;s one way to do it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package &#39;nginx&#39; do
+  action :install
+end
+
+package &#39;mysql&#39; do
+  action :install
+end
+
+package &#39;git&#39; do
+  action :install
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pretty cumbersome, no? But with the magic of array iteration, we can knock this out much more simply:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;%[nginx mysql git].each do |package|
+  package package do
+    action :install
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;%w&lt;/code&gt; portion says &amp;ldquo;split this array based on whitespace (or by &amp;lsquo;word&amp;rsquo;)&amp;rdquo;. Then for each of those items, shove the value into the variable &lt;code&gt;package&lt;/code&gt;, which we can then loop through.&lt;/p&gt;
+
+&lt;p&gt;Magic!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

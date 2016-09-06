@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mattstratton.io</title>
+    <link>https://www.mattstratton.io/</link>
+    <description>Recent content on mattstratton.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2015 Matt Stratton</copyright>
+    <lastBuildDate>Tue, 06 Sep 2016 08:41:20 -0500</lastBuildDate>
+    <atom:link href="https://www.mattstratton.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>my alfred workflows</title>
+      <link>https://www.mattstratton.io/my-alfred-workflows/</link>
+      <pubDate>Tue, 06 Sep 2016 08:41:20 -0500</pubDate>
+      
+      <guid>https://www.mattstratton.io/my-alfred-workflows/</guid>
+      <description>&lt;p&gt;One of my &amp;ldquo;must have&amp;rdquo; utilities on OS X is Alfred. Sure, Spotlight is rad and everything, but the high level of customization that Alfred provides me is deeply ingrained into my muscle memory. This is just a list of a few of the Alfred Workflows that I love, and highly recommend.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.packal.org/workflow/toggle-wifi&#34;&gt;Toggle Wifi&lt;/a&gt; - When my computer is in my home office, the wifi is abysmal. I like to flip it off to only use Ethernet there; this simple workflow lets me switch wifi on and off.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.packal.org/workflow/speedtest&#34;&gt;Speedtest&lt;/a&gt; - Like I said, my internet speed can be flaky. This performs a quick speedtest. Yes, I could run &lt;code&gt;speedtest-cli&lt;/code&gt; in the terminal, but whatever.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.packal.org/workflow/alfred-chrome&#34;&gt;Alfred Chrome&lt;/a&gt; - I use several Google Chrome profiles; and it never fails that the one I am trying to open the link in is the one with the wrong user. In theory this will pop a URL in the profile that I want. I&amp;rsquo;m having some issues with it now, but the idea is sound.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.packal.org/workflow/coffeecoffee&#34;&gt;CoffeeCoffee&lt;/a&gt; - Keep your Mac from sleeping&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.packal.org/workflow/slackfred&#34;&gt;Slackfred&lt;/a&gt; - Adds Slack functions to Alfred&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.packal.org/workflow/resize-image&#34;&gt;Resize Image&lt;/a&gt; - Resize an image, selected in Finder, to a target width&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.packal.org/workflow/packal-updater&#34;&gt;Packal Updater&lt;/a&gt; - Update all your Alfred workflows (if they are hosted on Packal)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.packal.org/workflow/github-command-bar&#34;&gt;GitHub&lt;/a&gt; - Lots of helpful commands to find open issues, repos, etc, on the githubs&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>danger of chef starter kit</title>
+      <link>https://www.mattstratton.io/danger-of-chef-starter-kit/</link>
+      <pubDate>Mon, 14 Sep 2015 10:47:13 -0500</pubDate>
+      
+      <guid>https://www.mattstratton.io/danger-of-chef-starter-kit/</guid>
+      <description>&lt;p&gt;When you are using the Chef Manage UI, there is the option to &amp;ldquo;Download Starter Kit&amp;rdquo;. When you do this, two things happen (which you are warned about).&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Your user key is reset.&lt;/li&gt;
+&lt;li&gt;Your organization&amp;rsquo;s default validator key is also reset.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It will also download a pre-configured chef-repo for you, which is kind of nice.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s the scary part. Let&amp;rsquo;s say you don&amp;rsquo;t have admin access to your organization. You won&amp;rsquo;t be able to reset the validator key, which is cool, and you&amp;rsquo;ll get an error telling you that you didn&amp;rsquo;t have access to download the Starter Kit. However, unbeknownst to you, your user key was reset before this happened. So you&amp;rsquo;ve now reset your user key.&lt;/p&gt;
+
+&lt;p&gt;Moral of the story? Don&amp;rsquo;t use the Starter Kit except for the very first time you&amp;rsquo;re playing around with Chef and maybe trying things out in training.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>a few of my favorite things</title>
+      <link>https://www.mattstratton.io/a-few-of-my-favorite-things/</link>
+      <pubDate>Sun, 13 Sep 2015 14:21:55 -0500</pubDate>
+      
+      <guid>https://www.mattstratton.io/a-few-of-my-favorite-things/</guid>
+      <description>&lt;p&gt;I like tools and toys. There are a bunch of things I use in my day-to-day work (and play) that I&amp;rsquo;d love to share with you. hello&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;RescueTime&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating multiple validator keys in Chef</title>
+      <link>https://www.mattstratton.io/creating-multiple-validator-keys-in-chef/</link>
+      <pubDate>Wed, 09 Sep 2015 09:54:20 -0500</pubDate>
+      
+      <guid>https://www.mattstratton.io/creating-multiple-validator-keys-in-chef/</guid>
+      <description>
+
+&lt;p&gt;By default, many folks think that there is one (and only one) validator key for a Chef organization. Which brings up a few issues:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If the validator key ever needs to be reset, then everyone who was using that key is screwed.&lt;/li&gt;
+&lt;li&gt;If the validator key is compromised, then it must be reset for everyone.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The good news is that you can have as many validator keys as you want. For example, every user who has the capability of performing &lt;code&gt;knife bootstrap&lt;/code&gt; might have their own. Or you might use a different key for your Azure provisioning than for your VMware provisioining, etc. This is a really easy thing to do.&lt;/p&gt;
+
+&lt;h2 id=&#34;adding-a-validator-client-via-knife:34526d18ffb1d4e9e664c0aa33873b42&#34;&gt;Adding a validator client via knife&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;knife client create mstratton_validator_test --file mstratton_validator_test.pem --validator&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After you do this, your editor will pop open which lets you make changes to the client configuration if you would like. You can use the &lt;code&gt;--disable-editing&lt;/code&gt; flag to remove this capability. The &lt;code&gt;--file&lt;/code&gt; flag will specify where you would like the private key to be written to.&lt;/p&gt;
+
+&lt;h2 id=&#34;adding-a-validator-client-via-chef-manage-https-docs-chef-io-manage-html:34526d18ffb1d4e9e664c0aa33873b42&#34;&gt;Adding a validator client via &lt;a href=&#34;https://docs.chef.io/manage.html&#34;&gt;Chef Manage&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Log onto your Chef Manage UI. If you use Hosted Chef, the url is &lt;a href=&#34;http://manage.chef.io&#34;&gt;http://manage.chef.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.mattstratton.io/img/validator/Chef_Manage1.png&#34; alt=&#34;Example image&#34; /&gt;
+
+&lt;img src=&#34;https://www.mattstratton.io/img/validator/Chef_Manage2.png&#34; alt=&#34;Example image&#34; /&gt;
+
+&lt;img src=&#34;https://www.mattstratton.io/img/validator/Chef_Manage3.png&#34; alt=&#34;Example image&#34; /&gt;
+
+&lt;img src=&#34;https://www.mattstratton.io/img/validator/Chef_Manage4.png&#34; alt=&#34;Example image&#34; /&gt;
+
+&lt;img src=&#34;https://www.mattstratton.io/img/validator/Chef_Manage5.png&#34; alt=&#34;Example image&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note - I have deleted this validator client, so don&amp;rsquo;t think you&amp;rsquo;re gonna be slick and hack the private key&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s that simple! You now have another validation client for your use.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iterating through word arrays is your friend in chef</title>
+      <link>https://www.mattstratton.io/iterating-through-word-arrays-is-your-friend-in-chef/</link>
+      <pubDate>Fri, 28 Aug 2015 02:20:39 -0500</pubDate>
+      
+      <guid>https://www.mattstratton.io/iterating-through-word-arrays-is-your-friend-in-chef/</guid>
+      <description>&lt;p&gt;Often times, when you&amp;rsquo;re installing a set of packages or Windows Features, for example, in Chef, you have a long list of items you want to install. Here&amp;rsquo;s one way to do it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package &#39;nginx&#39; do
+  action :install
+end
+
+package &#39;mysql&#39; do
+  action :install
+end
+
+package &#39;git&#39; do
+  action :install
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pretty cumbersome, no? But with the magic of array iteration, we can knock this out much more simply:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;%[nginx mysql git].each do |package|
+  package package do
+    action :install
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;%w&lt;/code&gt; portion says &amp;ldquo;split this array based on whitespace (or by &amp;lsquo;word&amp;rsquo;)&amp;rdquo;. Then for each of those items, shove the value into the variable &lt;code&gt;package&lt;/code&gt;, which we can then loop through.&lt;/p&gt;
+
+&lt;p&gt;Magic!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>speaking</title>
+      <link>https://www.mattstratton.io/speaking/</link>
+      <pubDate>Fri, 28 Aug 2015 00:22:34 -0500</pubDate>
+      
+      <guid>https://www.mattstratton.io/speaking/</guid>
+      <description>
+
+&lt;h2 id=&#34;current-headshot:991f6edce4c158f0d781901c75294628&#34;&gt;Current Headshot&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.mattstratton.io/img/matt-stratton-large.jpg&#34;&gt;&lt;img src=&#34;https://www.mattstratton.io/img/matt-stratton-small.jpg&#34; alt=&#34;Matt Stratton Headshot&#34; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;bio:991f6edce4c158f0d781901c75294628&#34;&gt;Bio&lt;/h2&gt;
+
+&lt;p&gt;Matt Stratton is a solutions architect at Chef, where he demonstrates how Chef’s automation platform provides speed and flexibility to clients’ infrastructure. He is devoted to concepts like Continuous Delivery and Infrastructure as Code, and his license plate actually says “DevOps”. He is the creator and co-host of the popular “&lt;a href=&#34;http://arresteddevops.com&#34;&gt;Arrested DevOps&lt;/a&gt;” podcast.&lt;/p&gt;
+
+&lt;p&gt;Matt has over 15 years experience in IT operations, ranging from large financial institutions such as JPMorganChase and internet firms, including Apartments.com. He has given presentations at ITSM focused events, ChefConf, DevOpsDays, Interop, and various local groups within the Chicagoland area.&lt;/p&gt;
+
+&lt;p&gt;He lives in Chicago with his three children, and has an unhealthy obsession with &lt;em&gt;Doctor Who&lt;/em&gt;, &lt;em&gt;Firefly&lt;/em&gt;, and &lt;em&gt;Game of Thrones&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>why a new blog</title>
+      <link>https://www.mattstratton.io/why-a-new-blog/</link>
+      <pubDate>Fri, 28 Aug 2015 00:04:19 -0500</pubDate>
+      
+      <guid>https://www.mattstratton.io/why-a-new-blog/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been blogging for, um, over a decade. My oldest post on &lt;a href=&#34;http://mattstratton.com&#34;&gt;mattstratton.com&lt;/a&gt; dates back to April 1, 2001. I have literally thousands of posts over there. While quite a few of them include useful technical items, that blog has always been intended as a personal journal. Heck, it began life on &lt;a href=&#34;http://livejournal.com&#34;&gt;LiveJournal&lt;/a&gt; (holla).&lt;/p&gt;
+
+&lt;p&gt;As I&amp;rsquo;ve been accumulating a bunch of ideas for technical posts that I would like to write up, it seemed that the old blog was the wrong place for these things. Granted, I&amp;rsquo;ve got SEO for days over there (mattstratton.com is 17 years  and 7 months old, which means the Google machine thinks I&amp;rsquo;m pretty freaking legit). But mixing in all that personal stuff, along with all the fancy-pants Wordpress nonsense, didn&amp;rsquo;t seem to make a lot of sense to me. So it was time to rise from the ashes with something new.&lt;/p&gt;
+
+&lt;p&gt;I considered adding some blog content to &lt;a href=&#34;http://arresteddevops.com&#34;&gt;Arrested DevOps&lt;/a&gt;, but the podcast format of the site was making that challenging. And this seemed like a great chance to try out a simpler, more static-content style blog platform. So this is my experiment.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m hosting this bad boy on &lt;a href=&#34;http://pages.github.com&#34;&gt;GitHub Pages&lt;/a&gt;, and it&amp;rsquo;s powered by &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. This means that I write all my posts in Markdown, and publish by using git commits (I have it hooked up to &lt;a href=&#34;http://wercker.com/&#34;&gt;Wercker&lt;/a&gt; to do the automagic posting, and you can read how to do that &lt;a href=&#34;http://gohugo.io/tutorials/automated-deployments/&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;The design of the blog is intentionally simple right now; I&amp;rsquo;m using the &lt;a href=&#34;https://github.com/nishanths/cocoa-hugo-theme&#34;&gt;cocoa theme&lt;/a&gt; and I&amp;rsquo;ll probably pretty it up a bit over time. But for now I want to focus on content.&lt;/p&gt;
+
+&lt;p&gt;Another thing I&amp;rsquo;m looking to do with my Hugo experiements is to see if it&amp;rsquo;s practical to migrate Arrested DevOps over to this framework. We shall see. I&amp;rsquo;ve got a pretty complex Wordpress setup over there, and I&amp;rsquo;m loathe to mess with it too much.&lt;/p&gt;
+
+&lt;p&gt;One final thought - my goal with this blog is to share anything cool and useful I come accross in my travels with Chef. If I learn a neat little trick, I&amp;rsquo;ll write a blog post about it. Chance are that &lt;a href=&#34;http://jtimberman.housepub.org/&#34;&gt;Josh Timberman&lt;/a&gt; already wrote about it, but that doesn&amp;rsquo;t mean I won&amp;rsquo;t share it with you as well.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>https://www.mattstratton.io/about/</link>
+      <pubDate>Thu, 27 Aug 2015 22:26:14 -0500</pubDate>
+      
+      <guid>https://www.mattstratton.io/about/</guid>
+      <description>&lt;p&gt;This is the &lt;em&gt;technical&lt;/em&gt; blog of Matt Stratton. All the personal stuff can be found at &lt;a href=&#34;http://mattstratton.com&#34;&gt;mattstratton.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you have feedback or edits to any of my posts, pull requests are welcome at &lt;a href=&#34;http://github.com/mattstratton/mattstratton.io&#34;&gt;http://github.com/mattstratton/mattstratton.io&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+
+<title>
+iterating through word arrays is your friend in chef
+</title>
+<link rel="canonical" href="https://www.mattstratton.io/iterating-through-word-arrays-is-your-friend-in-chef/">
+
+<link rel="stylesheet" href="https://www.mattstratton.io/css/reset.css">
+<link rel="stylesheet" href="https://www.mattstratton.io/css/pygments.css">
+<link rel="stylesheet" href="https://www.mattstratton.io/css/main.css">
+ 
+<link rel="stylesheet" href="https://www.mattstratton.io/css/mywebfontsfile.css">
+
+
+
+<link rel="shortcut icon"
+
+    href="https://www.mattstratton.io/img/favicon.ico"
+
+>
+
+
+
+</head>
+
+
+<body lang="en">
+
+<div class="section header">
+    <div class="container">
+        <div class="content">
+            <nav>
+                <ul>
+                    <a href="https://www.mattstratton.io/posts"><li>posts</li></a>
+                    <a href="https://www.mattstratton.io/about"><li>about</li></a>
+                    <a href="https://www.mattstratton.io/speaking"><li>speaking</li></a>
+                </ul>
+            </nav>
+            <a href="https://www.mattstratton.io/"><div class="name">Matt Stratton</div></a>
+        </div>
+    </div>
+</div>
+
+<div class="section icons">
+    <div class="container">
+        <div class="content">
+
+        
+            <a href="//github.com/mattstratton" target="_blank">
+                <i class="icon ion-social-github"></i>
+            </a>
+        
+
+        
+            <a href="//twitter.com/mattstratton" target="_blank">
+                <i class="icon ion-social-twitter"></i>
+            </a>
+        
+
+        
+            <a href="//linkedin.com/in/mattstratton" target="_blank">
+                <i class="icon ion-social-linkedin"></i>
+            </a>
+        
+
+        
+            <a href="//facebook.com/matt.stratton" target="_blank">
+                <i class="icon ion-social-facebook larger"></i>
+            </a>
+        
+
+        
+
+        
+            <a href="mailto:matt.stratton@gmail.com">
+                <i class="icon ion-ios-email larger"></i>
+            </a>
+        
+        </div>
+    </div>
+</div>
+
+
+<body lang="en">
+
+<div class="section main post">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <a href="https://www.mattstratton.io/iterating-through-word-arrays-is-your-friend-in-chef/"><div class="page-heading">
+
+    iterating through word arrays is your friend in chef
+
+</div>
+
+</a>
+                <div class="meta">
+                    <div class="date">Aug 28, 2015</div>
+                    <div class="word-count"><div class="middot"></div>200 words</div>
+                    <div class="reading-time"><div class="middot"></div>1 minute read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                <p>Often times, when you&rsquo;re installing a set of packages or Windows Features, for example, in Chef, you have a long list of items you want to install. Here&rsquo;s one way to do it:</p>
+
+<pre><code>package 'nginx' do
+  action :install
+end
+
+package 'mysql' do
+  action :install
+end
+
+package 'git' do
+  action :install
+end
+</code></pre>
+
+<p>Pretty cumbersome, no? But with the magic of array iteration, we can knock this out much more simply:</p>
+
+<pre><code>%[nginx mysql git].each do |package|
+  package package do
+    action :install
+  end
+end
+</code></pre>
+
+<p>The <code>%w</code> portion says &ldquo;split this array based on whitespace (or by &lsquo;word&rsquo;)&rdquo;. Then for each of those items, shove the value into the variable <code>package</code>, which we can then loop through.</p>
+
+<p>Magic!</p>
+
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mattstrattonio';
+    var disqus_identifier = 'https:\/\/www.mattstratton.io\/iterating-through-word-arrays-is-your-friend-in-chef\/';
+    var disqus_title = 'iterating through word arrays is your friend in chef';
+    var disqus_url = 'https:\/\/www.mattstratton.io\/iterating-through-word-arrays-is-your-friend-in-chef\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                <br>
+                <p><a href="https://www.mattstratton.io/posts">Back to posts</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+    var pageTracker = _gat._getTracker("UA-66839838-1");
+    pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+
+
+</body>
+</html>
+
